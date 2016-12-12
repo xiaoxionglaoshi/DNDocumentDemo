@@ -95,6 +95,11 @@ class ViewController: UIViewController {
             }
         }
         
+        // 读取文件
+        let file = customArrayPath;
+        let readArray = NSArray(contentsOfFile: file)
+        print("read Array: \(readArray)")
+        
         
         // 判断目录是否存在
         let isExist = fileManager.fileExists(atPath: customTxtPath)
@@ -132,6 +137,8 @@ class ViewController: UIViewController {
             print("删除失败: \(error)")
         }
        
+        
+        
         
     }
     
